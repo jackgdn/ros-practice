@@ -1,4 +1,12 @@
-build/
-devel/
-__pycache__/
+build/*
+devel/*
+!devel/include/
+!devel/include/**
+!devel/lib/
+devel/lib/*
+!devel/lib/python3/
+!devel/lib/python3/**
+devel/lib/python3/__pycache__/
+devel/lib/python3/**/__pycache__/**
 src/CMakeLists.txt
+src/**/scripts/__pycache__/
