@@ -1,2 +1,4 @@
 build/
 devel/
+__pycache__/
+src/CMakeLists.txt
