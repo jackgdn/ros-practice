@@ -1,8 +1,0 @@
-prefix=/home/jackgdn/ros-project/devel
-
-Name: turtle
-Description: Description of turtle
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

@@ -1,8 +1,0 @@
-prefix=/home/jackgdn/ros-project/devel
-
-Name: communication_package
-Description: Description of communication_package
-Version: 0.0.0
-Cflags: -I/home/jackgdn/ros-project/devel/include
-Libs: -L${prefix}/lib 
-Requires: roscpp rospy std_msgs message_runtime
