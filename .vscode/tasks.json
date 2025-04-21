@@ -1,0 +1,35 @@
+{
+    // 有关 tasks.json 格式的文档，请参见
+    // https://go.microsoft.com/fwlink/?LinkId=733558
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "catkin_make:debug",
+            "type": "shell",
+            "command": "catkin_make",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "dependsOn": ["chmod_scripts"],
+            "presentation": {
+                "reveal": "always"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "chmod_scripts",
+            "type": "shell",
+            "command": "chmod",
+            "args": [
+                "+x",
+                "/home/jackgdn/ros-project/src/*/scripts/*.py"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "echo": true
+            }
+        }
+    ]
+}

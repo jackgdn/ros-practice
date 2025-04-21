@@ -1,0 +1,2 @@
+communication_package:libtest:test_package:turtle
+-DCATKIN_DEVEL_PREFIX=/home/jackgdn/ros-project/devel -DCMAKE_INSTALL_PREFIX=/home/jackgdn/ros-project/install -G Unix Makefiles

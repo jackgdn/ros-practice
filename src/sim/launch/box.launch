@@ -1,0 +1,4 @@
+<launch>
+    <param name="robot_description" textfile="$(find sim)/urdf/box.urdf" />
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find sim)/config/rviz/box.rviz" required="true" />
+</launch>

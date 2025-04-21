@@ -1,0 +1,6 @@
+<launch>
+    <node pkg="turtle" type="service_cpp_node" name="service_cpp_node" output="screen"/>
+    <node pkg="turtle" type="service_py.py" name="service_py_node" output="screen"/>
+
+    <node pkg="turtlesim" type="turtlesim_node" name="turtlesim_node" />
+</launch>

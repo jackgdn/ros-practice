@@ -1,0 +1,6 @@
+<launch>
+    <node pkg="turtle" type="topic_publish_cpp_node" name="topic_publish_cpp_node" />
+    <node pkg="turtle" type="topic_publish_py.py" name="topic_publish_py_node" />
+
+    <node pkg="turtlesim" type="turtlesim_node" name="turtlesim_node" />
+</launch>

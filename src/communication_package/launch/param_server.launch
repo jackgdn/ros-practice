@@ -1,0 +1,20 @@
+<launch>
+    <!-- C++ nodes -->
+    <!-- <node pkg="communication_package" type="paramset_node" name="paramset_cpp"
+        output="screen" /> -->
+    <node pkg="communication_package" type="paramget_node" name="paramget_cpp"
+        output="screen" />
+
+    <!-- Python nodes -->
+    <!-- <node pkg="communication_package" type="paramset_py.py" name="paramset_py"
+        output="screen" /> -->
+    <node pkg="communication_package" type="paramget_py.py" name="paramget_py"
+        output="screen" />
+
+    <!-- <param name="name" type="string" value="jackgdn" />
+    <param name="age" type="int" value="20" />
+    <param name="gender" type="string" value="Male" /> -->
+
+    <rosparam file="$(find communication_package)/config/Person.yaml" command="load" />
+
+</launch>

@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="test_package" type="test_package_node" name="cpp_node" output="screen" />
+    <node pkg="test_package" type="test_package_node.py" name="py_node" output="screen" />
+</launch>

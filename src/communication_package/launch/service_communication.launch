@@ -1,0 +1,13 @@
+<launch>
+    <!-- C++ nodes -->
+    <node pkg="communication_package" type="division_server_node" name="division_server_cpp"
+        output="screen" />
+    <node pkg="communication_package" type="division_client_node" name="division_client_cpp"
+        output="screen" />
+
+    <!-- Python nodes -->
+    <node pkg="communication_package" type="division_server_py.py" name="division_server_py"
+        output="screen" />
+    <node pkg="communication_package" type="division_client_py.py" name="division_client_py"
+        output="screen" />
+</launch>

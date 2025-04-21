@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="libtest" type="hello_cpp_node" name="hello_cpp_node" output="screen" />
+    <node pkg="libtest" type="hello_py.py" name="hello_py_node" output="screen" />
+</launch>
