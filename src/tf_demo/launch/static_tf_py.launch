@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="tf_demo" type="static_broadcaster_tf.py" name="static_broadcaster_tf" output="screen" />
+    <node pkg="tf_demo" type="static_listener_tf.py" name="static_listener_tf" output="screen" />
+</launch>
