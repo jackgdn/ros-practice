@@ -1,7 +1,3 @@
-#!/usr/bin/python3
-
-import logging
-
 import rospy
 import tf
 import tf2_ros

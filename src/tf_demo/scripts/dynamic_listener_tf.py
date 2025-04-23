@@ -1,4 +1,4 @@
-import os
+import logging
 
 import rospy
 import tf2_ros
@@ -7,6 +7,7 @@ from tf2_geometry_msgs import PointStamped
 
 def main():
     rospy.init_node("dynamic_listener_tf")
+    logging.getLogger("rosout").setLevel(logging.DEBUG)
 
     # 创建 TF 订阅对象
     buffer = tf2_ros.Buffer()
