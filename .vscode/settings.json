@@ -82,7 +82,8 @@
         "typeindex": "cpp",
         "typeinfo": "cpp",
         "variant": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "codecvt": "cpp"
     },
     "ros.distro": "noetic",
     "[python]": {

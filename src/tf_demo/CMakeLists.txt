@@ -139,6 +139,9 @@ include_directories(
 ## The recommended prefix ensures that target names across packages don't collide
 add_executable(static_broadcaster_tf_node src/static_broadcaster_tf.cpp)
 add_executable(static_listener_tf_node src/static_listener_tf.cpp)
+add_executable(dynamic_broadcaster_tf_node src/dynamic_broadcaster_tf.cpp)
+add_executable(dynamic_listener_tf_node src/dynamic_listener_tf.cpp)
+add_executable(random_track src/random_track.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -157,6 +160,15 @@ target_link_libraries(static_broadcaster_tf_node
 target_link_libraries(static_listener_tf_node
   ${catkin_LIBRARIES}
 )
+target_link_libraries(dynamic_broadcaster_tf_node
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(dynamic_listener_tf_node
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(random_track
+  ${catkin_LIBRARIES}
+)
 
 #############
 ## Install ##
@@ -169,6 +181,7 @@ target_link_libraries(static_listener_tf_node
 ## in contrast to setup.py, you can choose the destination
 catkin_install_python(PROGRAMS
   scripts/static_broadcaster_tf.py
+  scripts/static_listener_tf.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
