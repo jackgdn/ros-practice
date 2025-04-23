@@ -27,16 +27,15 @@ def main():
         point_laser.point.z = 3.3
 
         try:
-            point_base = buffer.transform(point_base, "base_link")
+            point_base = buffer.transform(point_laser, "base_link")
             rospy.logdebug(
-                "Transformed position:\nx=%.2f\ny=%.2f\nz=%.2f\Coordinate: %s\n",
-                point_base.x,
-                point_base.y,
-                point_base.z,
+                "\nTransformed position:\nx=%.2f\ny=%.2f\nCoordinate:\n%s\n",
+                point_base.point.x,
+                point_base.point.y,
                 point_base.header.frame_id,
             )
         except tf2_ros.TransformException:
-            rospy.logwarn("Unable to transform.")
+            rospy.logwarn("Failed to transform.")
         rate.sleep()
 
 

@@ -1,0 +1,9 @@
+<launch>
+    <node pkg="tf_demo" type="dynamic_broadcaster_tf.py" name="dynamic_broadcaster_tf"
+        output="screen" />
+    <node pkg="tf_demo" type="dynamic_listener_tf.py" name="dynamic_listener_tf"
+        output="screen" />
+    <node pkg="tf_demo" type="random_track.py" name="random_track" output="screen" />
+    <node pkg="turtlesim" type="turtlesim_node" name="turtlesim_node" required="true" />
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find tf_demo)/config/rviz/turtle.rviz" />
+</launch>

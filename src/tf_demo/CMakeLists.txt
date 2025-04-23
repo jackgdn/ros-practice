@@ -182,6 +182,9 @@ target_link_libraries(random_track
 catkin_install_python(PROGRAMS
   scripts/static_broadcaster_tf.py
   scripts/static_listener_tf.py
+  scripts/dynamic_broadcaster_tf.py
+  scripts/dynamic_listener_tf.py
+  scripts/random_track.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

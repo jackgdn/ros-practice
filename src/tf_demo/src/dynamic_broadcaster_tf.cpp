@@ -24,10 +24,10 @@ void callback(const turtlesim::Pose::ConstPtr &pose) {
 
     tf2::Quaternion qtn;
     qtn.setRPY(0.0, 0.0, pose->theta);
-    ts.transform.rotation.w = qtn.getW();
     ts.transform.rotation.x = qtn.getX();
     ts.transform.rotation.y = qtn.getY();
     ts.transform.rotation.z = qtn.getZ();
+    ts.transform.rotation.w = qtn.getW();
 
     broadcaster.sendTransform(ts);
 }
