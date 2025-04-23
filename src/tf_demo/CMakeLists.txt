@@ -142,6 +142,7 @@ add_executable(static_listener_tf_node src/static_listener_tf.cpp)
 add_executable(dynamic_broadcaster_tf_node src/dynamic_broadcaster_tf.cpp)
 add_executable(dynamic_listener_tf_node src/dynamic_listener_tf.cpp)
 add_executable(random_track src/random_track.cpp)
+add_executable(multi_frame src/multi_frame.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -169,6 +170,9 @@ target_link_libraries(dynamic_listener_tf_node
 target_link_libraries(random_track
   ${catkin_LIBRARIES}
 )
+target_link_libraries(multi_frame
+  ${catkin_LIBRARIES}
+)
 
 #############
 ## Install ##
@@ -185,6 +189,7 @@ catkin_install_python(PROGRAMS
   scripts/dynamic_broadcaster_tf.py
   scripts/dynamic_listener_tf.py
   scripts/random_track.py
+  scripts/multi_frame.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

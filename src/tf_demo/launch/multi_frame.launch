@@ -1,0 +1,8 @@
+<launch>
+    <node pkg="tf2_ros" type="static_transform_publisher" name="son1"
+        args="0.1 0.1 0.3 0.1 0.2 0.3 /world /son1" output="screen" />
+    <node pkg="tf2_ros" type="static_transform_publisher" name="son2"
+        args="0.1 0.3 0.3 0.3 0.2 0.1 /world /son2" output="screen" />
+    <node pkg="tf_demo" type="multi_frame" name="multi_frame_cpp" output="screen" />
+    <node pkg="tf_demo" type="multi_frame.py" name="multi_frame_py" output="screen" />
+</launch>
