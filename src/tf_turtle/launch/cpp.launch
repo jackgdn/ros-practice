@@ -1,0 +1,10 @@
+<launch>
+    <node pkg="tf_turtle" type="broadcaster" name="broadcaster1" ns="turtle1" />
+    <node pkg="tf_turtle" type="broadcaster" name="broadcaster2" ns="turtle2" />
+    <node pkg="tf_turtle" type="controller" name="controller" output="screen" />
+    <node pkg="tf_turtle" type="rand_turtle1" name="rand_turtle1" />
+    <node pkg="tf_turtle" type="turtle_spawn" name="turtle_spawn" output="screen" />
+
+    <node pkg="turtlesim" type="turtlesim_node" name="turtlesim_node" required="true" />
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find tf_turtle)/config/rviz/turtle.rviz" />
+</launch>
