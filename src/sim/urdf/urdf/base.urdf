@@ -3,6 +3,7 @@
     <link name="base_footprint">
         <visual>
             <geometry>
+                <!-- 球体，半径为 0.001 -->
                 <sphere radius="0.001" />
             </geometry>
         </visual>
@@ -10,24 +11,32 @@
 
     <!-- 添加底盘 -->
     <link name="base_link">
+        <!-- 描述外观 -->
         <visual>
             <geometry>
+                <!-- 圆柱，半径为 0.1，高度为 0.08 -->
                 <cylinder radius="0.1" length="0.08" />
             </geometry>
+            <!-- 初始偏移量 -->
             <origin xyz="0 0 0" rpy="0 0 0" />
+            <!-- 材料属性 -->
             <material name="yellow">
                 <color rgba="0.8 0.3 0.1 0.5" />
             </material>
         </visual>
     </link>
 
+    <!-- 添加底盘与 base_footprint 的连接 -->
     <joint name="base_link2base_footprint" type="fixed">
+        <!-- 父级连杆名字 -->
         <parent link="base_footprint" />
+        <!-- 子级连杆名字 -->
         <child link="base_link" />
+        <!-- 各轴线上的偏移量 -->
         <origin xyz="0 0 0.055" />
     </joint>
 
-    <!-- 添加驱动轮 -->
+    <!-- 添加左驱动轮 -->
     <link name="left_wheel">
         <visual>
             <geometry>
@@ -38,16 +47,18 @@
                 <color rgba="0.0 0.0 0.0 1.0" />
             </material>
         </visual>
-
     </link>
 
+    <!-- 添加左驱动轮与底盘间的连接 -->
     <joint name="left_wheel2base_link" type="continuous">
         <parent link="base_link" />
         <child link="left_wheel" />
         <origin xyz="0 0.1 -0.0225" />
+        <!-- 设置关节围绕哪个关节轴运动 -->
         <axis xyz="0 1 0" />
     </joint>
 
+    <!-- 添加右驱动轮 -->
     <link name="right_wheel">
         <visual>
             <geometry>
@@ -58,9 +69,9 @@
                 <color rgba="0.0 0.0 0.0 1.0" />
             </material>
         </visual>
-
     </link>
 
+    <!-- 添加右驱动轮与底盘的连接 -->
     <joint name="right_wheel2base_link" type="continuous">
         <parent link="base_link" />
         <child link="right_wheel" />
@@ -68,7 +79,7 @@
         <axis xyz="0 1 0" />
     </joint>
 
-    <!-- 添加万向轮(支撑轮) -->
+    <!-- 添加前支撑轮 -->
     <link name="front_wheel">
         <visual>
             <geometry>
@@ -81,6 +92,7 @@
         </visual>
     </link>
 
+    <!-- 添加前支撑轮与底盘的连接 -->
     <joint name="front_wheel2base_link" type="continuous">
         <parent link="base_link" />
         <child link="front_wheel" />
@@ -88,6 +100,7 @@
         <axis xyz="1 1 1" />
     </joint>
 
+    <!-- 添加后支撑轮 -->
     <link name="back_wheel">
         <visual>
             <geometry>
@@ -100,6 +113,7 @@
         </visual>
     </link>
 
+    <!-- 添加后支撑轮与底盘的连接 -->
     <joint name="back_wheel2base_link" type="continuous">
         <parent link="base_link" />
         <child link="back_wheel" />
